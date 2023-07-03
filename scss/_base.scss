@@ -1,0 +1,214 @@
+$colorPrime: #ffc300; //prime equals alpha in bootstrap dd0426
+$colorPrime-hover: #ffd60a;
+$colorAzure: #f0ffff;
+$colorAzure-dr: #d6e3e3;
+$colorRed: #ff2f4e;
+$colorBlue: #0091ff;
+$colorYellow: #ffa900;
+$colorOmega: #00000000;
+$colorBlack: #000;
+
+$font-lil: 0.5rem;
+$font-mid: 3em;
+$font-larg: 10em;
+$font-big: 10em;
+
+$bgDark: #003566; //also use for other
+$bgDarker: #001d3d; //also use for other
+$bgDarker-2: #001838; //also use for other
+$bgDarkest: #000814; //also use for other
+
+$tran-mid: all 0.5s;
+$tran-short: all 0.2s;
+
+$social-button-colors: (
+  "facebook": #3b5999,
+  "linkedin": #0077b5,
+  "github": #21262d,
+  "twitter": #55acee,
+);
+
+$bggradshadow: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+/* ..............................................font.................................................. */
+@font-face {
+  font-family: Bebas;
+  src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+  font-family: Yellowtail;
+  src: url(../fonts/Yellowtail-Regular.ttf);
+}
+
+.font-yellowtail {
+  font-family: Yellowtail !important;
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/static/Raleway-Light.ttf);
+}
+
+@font-face {
+  font-family: Raleway-bold;
+  src: url(../fonts/static/Raleway-Bold.ttf);
+}
+// ---------[mixin]---------
+@mixin transition {
+  transition: 0.3s;
+}
+@mixin flex-centralizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-starter {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+@mixin flex-ender {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+@mixin flex-start {
+  display: flex;
+  justify-content: start;
+}
+@mixin bgBlur {
+  background-color: rgba(240, 255, 255, 0.29);
+  backdrop-filter: blur(15px);
+}
+@mixin circlebtn {
+  @include flex-centralizer;
+  position: relative;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  text-align: center;
+  border: 2px solid $colorAzure;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: $colorAzure;
+  transition: $tran-short;
+
+  &:hover {
+    border-color: $colorPrime;
+    color: $colorPrime;
+    background-color: $colorAzure;
+  }
+}
+@mixin circlebtn-x {
+  @include flex-centralizer;
+  position: relative;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  text-align: center;
+  border: 2px solid $colorAzure;
+  text-transform: uppercase;
+  color: $colorAzure;
+  transition: $tran-short;
+  &:hover {
+    border-color: $colorPrime;
+    color: $colorPrime;
+    background: #f0ffff;
+    background: linear-gradient(to bottom, #f0ffff 20%, #ffc300 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+@mixin shadowHoverbtn {
+  width: 30px;
+  height: 30px;
+  color: $colorAzure !important;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0.7, 1);
+  &:hover {
+    background: $colorPrime;
+    box-shadow: 0 0 1px 4px rgba($colorPrime-hover, 0.8),
+      0 0 1px 10px rgba($colorPrime-hover, 0.3),
+      0 0 1px 15px rgba($colorPrime-hover, 0.1);
+  }
+}
+@mixin justLink {
+  color: $colorAzure;
+  &:hover {
+    color: $colorAzure;
+  }
+  &:focus {
+    color: $colorAzure-dr;
+  }
+}
+@mixin btnBorder {
+  border-radius: 50%;
+}
+@mixin borderSide($color : $colorAzure){
+  border-left: 3px solid $color;
+}
+// ---------[extend]-------
+.bg-dess /*default essentials*/ {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+// -------[keyframe]-------
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes border {
+  0% {
+    background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+  }
+  25% {
+    background-size: 100% 3px, 3px 0, 0 3px, 3px 0;
+  }
+  50% {
+    background-size: 100% 3px, 3px 100%, 0 3px, 3px 0;
+  }
+  75% {
+    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 0;
+  }
+  100% {
+    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+  }
+}
+@keyframes borderReverse {
+  0% {
+    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+  }
+  25% {
+    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 0;
+  }
+  50% {
+    background-size: 100% 3px, 3px 100%, 0 3px, 3px 0;
+  }
+
+  75% {
+    background-size: 100% 3px, 3px 0, 0 3px, 3px 0;
+  }
+  100% {
+    background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+  }
+}
+@keyframes burn {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -800px;
+  }
+}
+// -------[keyframe]-------
+@function decrease-height() {
+}
+// -------[function]-------

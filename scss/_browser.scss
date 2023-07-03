@@ -1,0 +1,32 @@
+/* ......................................browser........................................... */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $bgDarker;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $colorPrime;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $colorPrime-hover;
+}
+
+::selection {
+  color: $colorPrime-hover;
+  background-color: #00000035;
+}
+/* ......................................classes........................................... */
+.non-st /*select text*/ {
+  & * {
+    user-select: none !important;
+  }
+
+  &-single /*none select*/ {
+    user-select: none !important;
+  }
+}

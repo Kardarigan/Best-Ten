@@ -1,0 +1,195 @@
+/* ...................................resets................................ */
+/*classes*/
+.text {
+  &-danger {
+    color: $colorRed !important;
+  }
+  &-primary {
+    color: $colorBlue !important;
+  }
+}
+.btn {
+  border-radius: 50rem !important;
+  color: $colorAzure;
+  &:hover {
+    color: $colorAzure;
+  }
+
+  &-outline {
+    &-danger {
+      color: $colorRed !important;
+      border-color: $colorRed !important;
+      &:hover {
+        color: $colorAzure !important;
+        background-color: $colorRed !important;
+      }
+      &:focus {
+        color: $colorAzure !important;
+        background-color: $colorRed !important;
+      }
+    }
+    &-primary {
+      color: $colorBlue !important;
+      border-color: $colorBlue !important;
+      &:hover {
+        color: $colorAzure !important;
+        background-color: $colorBlue !important;
+      }
+    }
+    &-warning {
+      color: $colorYellow !important;
+      border-color: $colorYellow !important;
+      &:hover {
+        color: $colorAzure !important;
+        background-color: $colorYellow !important;
+      }
+    }
+    &-alpha {
+      color: $colorPrime !important;
+      border-color: $colorPrime !important;
+      &:hover {
+        color: $colorAzure !important;
+        background-color: $colorPrime !important;
+      }
+    }
+  }
+}
+.form-control:focus {
+  border-color: $colorOmega;
+  box-shadow: $colorPrime-hover;
+  color: $colorAzure;
+  background-color: $colorOmega;
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem $colorPrime;
+}
+.w-90 {
+  width: 90% !important;
+}
+.accordion {
+  &-button {
+    color: $colorPrime !important;
+    font-size: 1.3rem;
+    &:after {
+      content: "\25bc" !important;
+    }
+  }
+  &-item {
+    border-radius: 10px !important;
+    border: 5px solid $colorPrime;
+    box-shadow: 0 0 0 0 !important;
+  }
+}
+.bi-collection-fill{
+  &:before {
+    content: "" !important;
+  }
+  &:after {
+    content: "" !important;
+  }
+}
+.w-100 {
+  width: 100vw !important;
+}
+.h-100 {
+  height: 100vh !important;
+}
+.lead {
+  font-size: 1rem;
+}
+/*tags*/
+html {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+body {
+  background-color: $bgDark;
+}
+a {
+  text-decoration: none !important;
+  color: $colorPrime;
+  transition: $tran-short;
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    color: $colorPrime-hover;
+  }
+}
+input {
+  resize: none;
+  cursor: pointer;
+  &::placeholder{
+    font-size: 0.8em;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  user-select: none !important;
+  font-family: Bebas;
+}
+ol {
+  padding-left: 0 !important;
+  li {
+    font-size: 2.75rem;
+  }
+}
+ul {
+  padding-left: 0 !important;
+  li {
+    font-size: 2.75rem;
+  }
+}
+header {
+  height: 100vh !important;
+  padding-top: 13% !important;
+}
+p {
+  font-family: raleway;
+}
+h1 {
+  font-size: 5.5rem !important;
+}
+h2 {
+  font-size: 1.8rem !important;
+}
+h3 {
+  font-size: 3.5rem !important;
+}
+h4 {
+  font-size: 2.8rem !important;
+}
+h5 {
+  font-size: 1.3rem !important;
+}
+h6 {
+  font-size: 1.5rem !important;
+}
+abbr {
+  cursor: pointer !important;
+}
+img  {
+  border-radius: 50px;
+}
+li {
+  list-style: none;
+}
+hr {
+  margin: 10px 10px !important;
+}
+/*material design bootstrap*/
+.mask {
+  background-color: $colorPrime !important;
+}
+
+/*new classes*/
+
+.fs-7 {
+  font-size: 2rem !important;
+}
+.fs-8 {
+  font-size: 3rem !important;
+}
